@@ -16,5 +16,17 @@ public class StatisticServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void finfMax() {
+        StatisticsService service = new StatisticsService();
+        long current_max_index = 0;
+        long[] incomesInBillions = {0,5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12};
+        long expected = 12;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
 
